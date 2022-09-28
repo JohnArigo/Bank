@@ -5,8 +5,6 @@ namespace defining
     {
         static void Main(string[] args)
         {
-            bool keepGoing = true;
-
             Console.WriteLine("Make a checking and savings account");
             Console.WriteLine("First Name?");
             string firstName = Console.ReadLine();
@@ -21,8 +19,7 @@ namespace defining
 
             checking c1 = new checking($"{firstName}", $"{lastName}", cBalance);
             saving s1 = new saving($"{firstName}", $"{lastName}", sBalance);
-            // do
-            // {
+
             c1.Withdraw(1000.0M);
             Console.WriteLine(c1.balance);
             c1.Withdraw(1000.0M);
@@ -39,8 +36,6 @@ namespace defining
             s1.Withdraw(80.0M);
             s1.Withdraw(80.0M);
             Console.WriteLine(s1.balance);
-            // }
-            //while (keepGoing);
         }
     }
 }
